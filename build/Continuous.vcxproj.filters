@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pipen\OneDrive\Documentos\Universidad\Sem\Estructura\Taller de Pruebas\ED22-01-Gallardo\build\CMakeFiles\6b6f4cb921e18046ca0f220c4c85309f\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\pipen\OneDrive\Documentos\Universidad\Sem\Estructura\Taller de Pruebas\ED22-01-Gallardo\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\pipen\OneDrive\Documentos\Universidad\Sem\Estructura\Taller de Pruebas\ED22-01-Gallardo\build\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{93A0D8FC-C109-3027-A584-4BA2524EA6BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

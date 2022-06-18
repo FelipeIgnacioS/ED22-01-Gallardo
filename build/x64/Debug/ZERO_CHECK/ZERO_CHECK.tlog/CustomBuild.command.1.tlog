@@ -1,0 +1,10 @@
+^C:\USERS\PIPEN\ONEDRIVE\DOCUMENTOS\UNIVERSIDAD\SEM\ESTRUCTURA\TALLER DE PRUEBAS\ED22-01-GALLARDO\BUILD\CMAKEFILES\6B6F4CB921E18046CA0F220C4C85309F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo" "-BC:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/ProyectoDePruebas.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
