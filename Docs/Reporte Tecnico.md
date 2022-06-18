@@ -1,22 +1,39 @@
 ![UCN](IMAGES/60x60-ucn-negro.png)
 
-# Proyecto: Detección y conteo de personas
+# Informe Tecnico
 
-# Curso: Estructura de datos.
+## Curso: Estrcutura de datos.
 
-## Integrantes
+## Deteccion de Personas y conteo.
 
-  * Felipe Gallardo Santander
-  
-## Bitácora 
+## Alumnos:
+   * Felipe Gallardo
 
-  <Ver Bitacora>
+## Resumen:
+<
 
-## Resumen
+## 1 Introducción.
 
-<Resumen del reporte tecnico>
-<Imagen de portada>
-  
-## Documentos
-  
-  Reporte Tecnico
+### 1.1 Descripción del problema
+
+### 1.2 Objetivos
+
+#### 1.2.1 Obejtivos Generales
+
+#### 1.2.2 Objetivos Especificos
+
+### 1.3 Solución Propuesta
+
+## 2 Materiales y metodos
+
+### 2.1 Instalación
+
+### 2.2 Diseño
+
+### 2.3 Implementación
+
+## 3 Resultados
+
+## 4 Conclusiones 
+
+# Anexos
