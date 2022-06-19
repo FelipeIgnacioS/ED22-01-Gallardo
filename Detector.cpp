@@ -8,10 +8,9 @@
 
 using namespace cv;
 using namespace std;
+
+
 #include "Detector.hpp"
-
-
-
 
 void Detector::toggleMode() { m = (m == Default ? Daimler : Default); }
     
@@ -24,7 +23,6 @@ vector<People> Detector::detect(InputArray img){
         else if (m == Daimler)
             hog_d.detectMultiScale(img, found, 1, Size(2,2), Size(4,4), 1.05, 3, true);
 
-        
         vector<People> Peoples;
 
         for (vector<Rect>::iterator i = found.begin(); i != found.end(); ++i){
@@ -37,8 +35,7 @@ vector<People> Detector::detect(InputArray img){
 }
 
 void Detector::adjustRect(Rect & r) const{
-        // The HOG detector returns slightly larger rectangles than the real objects,
-        // so we slightly shrink the rectangles to get a nicer output.
+       
         r.x += cvRound(r.width*0.1);
         r.width = cvRound(r.width*0.8);
         r.y += cvRound(r.height*0.07);

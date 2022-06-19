@@ -1,13 +1,14 @@
 #ifndef ED22-01-GALLARDO_NODE_H
 #define ED22-01-GALLARDO_NODE_H
+#include "People.hpp"
 
-Class Node{
+class Node{
     private:
-    Person p;
+    People p;
     Node* next;
 
     public:
-    Node (Person p);
+    Node (People p);
     
     void setNext(Node* node);
     Node *getNext();

@@ -1,6 +1,6 @@
 #include "People.hpp"
 
-People::People(cv::Rect&){
+People::People(cv::Rect &r){
     xComienzo = r.x;
     yComienzo = r.y;
     xFin = r.x + r.width;
@@ -31,11 +31,4 @@ int People::getXCentro(){
 
 int People::getYCentro(){
     return yCentro;
-}
-
-void People::sumEntry(){
-    this->entry++;
-}
-void People::sumLeave(){
-    this->leave++;
 }
