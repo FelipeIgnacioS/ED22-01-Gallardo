@@ -7,3 +7,4 @@
 | 15/06 | OBJ-03 | Configuracion de proyecto y creacion de primeras clases | Felipe Gallardo | 1.5 horas | 2 horas | 
 | 18/06 | OBJ-04 | Documentación para archivos .md | Felipe Gallardo | 0.5 horas | 1 HORAS |
 | 18/06 | OBJ-05 | Creación de docs en github | Felipe Gallardo | 0.5 horas | 1.5 HORAS |
+| 19/06 | OBJ-06 | Nodos, Linkedlist, Persona, Detector | Felipe Gallardo | 2 horas | 4.5 horas |
