@@ -17,6 +17,8 @@ C:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacr
 C:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/DartConfiguration.tcl.in
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-MSVC.cmake
@@ -28,3 +30,8 @@ C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/
 C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake
 C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/3.23.2/CMakeRCCompiler.cmake
 C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/3.23.2/CMakeSystem.cmake
+C:/opencv/build/x64/vc15/lib/OpenCVConfig-version.cmake
+C:/opencv/build/x64/vc15/lib/OpenCVConfig.cmake
+C:/opencv/build/x64/vc15/lib/OpenCVModules-debug.cmake
+C:/opencv/build/x64/vc15/lib/OpenCVModules-release.cmake
+C:/opencv/build/x64/vc15/lib/OpenCVModules.cmake

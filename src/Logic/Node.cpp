@@ -1,11 +1,9 @@
 #include "includes/node.h"
-Node::Node(){
 
+Node::Node(People p){
+    
 }
 
-Node::Node(Persona p){
-
-}
 
 Node::~Node(){
 

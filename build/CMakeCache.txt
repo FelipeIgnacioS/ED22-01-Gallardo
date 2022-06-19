@@ -115,7 +115,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ProyectoDePruebas
+CMAKE_PROJECT_NAME:STATIC=opencvtest
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -255,6 +255,9 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=C:/opencv/build/x64/vc15/lib
+
 //Value Computed by CMake
 ProyectoDePruebas_BINARY_DIR:STATIC=C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build
 
@@ -266,6 +269,15 @@ ProyectoDePruebas_SOURCE_DIR:STATIC=C:/Users/pipen/OneDrive/Documentos/Universid
 
 //Name of the computer/site where compile is being run
 SITE:STRING=LaCochinae
+
+//Value Computed by CMake
+opencvtest_BINARY_DIR:STATIC=C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build
+
+//Value Computed by CMake
+opencvtest_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+opencvtest_SOURCE_DIR:STATIC=C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo
 
 
 ########################
@@ -426,6 +438,8 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[C:/opencv/build][v4.5.5()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND

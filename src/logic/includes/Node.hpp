@@ -3,15 +3,15 @@
 
 Class Node{
     private:
-    Persona persona;
+    Person p;
     Node* next;
 
     public:
-    Node();
-    Node (Persona p);
+    Node (Person p);
     
     void setNext(Node* node);
     Node *getNext();
+    People getPeople(People* p);
     ~Node();
     
 };
