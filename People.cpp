@@ -7,6 +7,8 @@ People::People(cv::Rect &r){
     yFin = r.y + r.height;
     xCentro = r.x + ((float)r.width/2.0);
     yCentro = r.y + ((float)r.height/2.0);;
+    entrys=0;
+    leaves=0;
 }
 
 int People::getXComienzo(){
@@ -31,4 +33,11 @@ int People::getXCentro(){
 
 int People::getYCentro(){
     return yCentro;
+}
+
+void People::sumE(){
+    entrys++;
+}
+void People::sumL(){
+    leaves++
 }

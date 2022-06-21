@@ -4,12 +4,12 @@
 
 class LinkedList{
     private:
-    Nodo* first;
+    Node* first;
 
     public:
-    int empty();
+    LinkedList(Node node);
+    bool empty();
     int size();
-    
 };
 
 #endif

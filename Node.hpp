@@ -4,7 +4,7 @@
 
 class Node{
     private:
-    People p;
+    People persona;
     Node* next;
 
     public:
@@ -12,7 +12,7 @@ class Node{
     
     void setNext(Node* node);
     Node *getNext();
-    People getPeople(People* p);
+    People getPeople();
     ~Node();
     
 };

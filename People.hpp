@@ -6,7 +6,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/videoio.hpp>
 
-class Persona
+class People
 {
 private:
     int xComienzo;
@@ -15,8 +15,11 @@ private:
     int yFin;
     int xCentro;
     int yCentro;
+    int entrys;
+    int leaves;
+
 public:
-    Persona(cv::Rect&);
+    People(cv::Rect&);
 
     int getXComienzo();
     int getYComienzo();
@@ -24,6 +27,8 @@ public:
     int getYFin();
     int getXCentro();
     int getYCentro();
+    void sumL();
+    void sumE();
 };
 
 #endif
