@@ -19,4 +19,4 @@
   
 ## Documentos
   
-  Reporte Tecnico
+  [Reporte técnico](https://github.com/FelipeIgnacioS/ED22-01-Gallardo/blob/main/Docs/Reporte%20Tecnico.md).
