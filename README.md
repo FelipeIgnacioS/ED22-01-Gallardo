@@ -10,7 +10,7 @@
   
 ## Bitácora 
 
-  Ver Bitácora [Bitácora](https://github.com/FelipeIgnacioS/ED22-01-Gallardo/blob/main/Docs/BIT%C3%81CORA.md).
+  [Ver Bitácora](https://github.com/FelipeIgnacioS/ED22-01-Gallardo/blob/main/Docs/BIT%C3%81CORA.md).
 
 ## Resumen
 
