@@ -18,7 +18,7 @@ public:
     Nodo* getNext();
     People getPeople();
     ~Nodo();
-
+    void setPeople(People p);
 };
 
 #endif 

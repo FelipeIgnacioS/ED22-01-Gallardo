@@ -1,4 +1,5 @@
 #include "Nodo.h"
+
 using namespace std;
 
 Nodo::Nodo() {
@@ -24,3 +25,8 @@ People Nodo::getPeople() {
 }
 
 Nodo::~Nodo(){}
+
+void Nodo::setPeople(People p)
+{
+	this->persona = p;
+}

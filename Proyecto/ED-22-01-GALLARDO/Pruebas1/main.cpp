@@ -1,29 +1,74 @@
-#include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
+#include <opencv2/objdetect.hpp>
 #include <opencv2/highgui.hpp>
-#include <iostream>
-using namespace cv;
+#include <opencv2/imgproc.hpp>
+#include <opencv2/videoio.hpp>
 
-void menu() {
-   
-}
+#include <iostream>
+#include <iomanip>
+#include "Detector.h"
+#include "People.h"
+
+using namespace cv;
+using namespace std;
+
 int main()
 {
-    /*Requerimientos
-    1. Detectar personas que pasan por la imagen y dibujar un rectangulo rojo
-    2. Cuantas personas han entrado
-    3. Cuantas persona han salido
-    4. Trafico de entrada personas/hora
-    5. Trafico de salida personas/hora
-    6. Cuantas personas distintas han entrado
-    7. Cuantas personas distintas han sailido
-    8. Listar n personas que mas han entrado con el numero de entradas con una imagen
-    9. Listar n personas que mas han salido con el numero de salidas con una imagen 
-    10. Configurar el archivo para las imagenes analizadas
-    11. Configurar la cantidad de personas individuales para mostrar de los listados de frecuencia de entrada y salida
+    int entrys = 0;
+    int leaves = 0;
+    float horas; //time[s] /3600
+    int entriesDiff = 0;
+    int leavesDiff = 0;
+
+    Detector detector;
+    Mat imagen;
+    imagen = imread("");
+    detector.toggleMode();
+    cout << detector.modeName() << endl;
+
+    vector<People> found = detector.detect(imagen);
+    for (vector<People>::iterator i = found.begin(); i != found.end(); ++i)
+    {
+        People& p = *i;
+        cout << "(" << p.getXComienzo() << ", " << p.getYComienzo() << ")" << endl;
+
+        rectangle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), cv::Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
+        circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
+        circle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), 3, cv::Scalar(255, 0, 255), 2);
+        circle(imagen, cv::Point(p.getXFin(), p.getYFin()), 3, cv::Scalar(0, 255, 255), 2);
+    }
+
+    imshow("People detector", imagen);
+    waitKey(0);
+
+    linkedList personasDistintas = new LinkedList();
+    linkedList personasDistintasEntries = new LinkedList();
+    LinkedList personasDistintasLeaves = new LinkedList();
+
+    /*contador de personas
+    Persona p = new Persona();
+    Nodo n = new Nodo(p);
+    if (!personasDistintas.exits(n)){
+        personasDistintas.add(p);
+    }
+    //entrada
+
+    if(personasDistintasEntries.exists(n)){
+        p.sumE();
+    }else{
+        personasDistintasEntries.add_ord_entry(p);
+        p.sumE;
+        entrysDiff++;
+    }entrys++;
+
+    //salida
+     if(personasDistintasLeaves.exists(n)){
+        p.sumL();
+    }else{
+        personasDistintasLeaves.add_ord_leave(p);
+        p.sumL();
+        leavesDiff++;
+    }leaves++;
+
     */
-
-     
-
     return 0;
 }

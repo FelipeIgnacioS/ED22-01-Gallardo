@@ -17,6 +17,7 @@ private:
     int yCentro;
     int entrys;
     int leaves;
+    int id;
 
 public:
     People();
@@ -31,6 +32,8 @@ public:
     void sumE();
     int getEntry();
     int getLeave();
+    int getID();
+ 
 };
 
 #endif

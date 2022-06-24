@@ -12,6 +12,7 @@ People::People(cv::Rect& r) {
     yCentro = r.y + ((float)r.height / 2.0);;
     entrys = 0;
     leaves = 0;
+    id = 0;
 }
 
 int People::getXComienzo() {
@@ -49,4 +50,7 @@ int People::getEntry() {
 }
 int People::getLeave() {
     return leaves;
+}
+int People::getID() {
+    return id;
 }
