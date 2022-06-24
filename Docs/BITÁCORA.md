@@ -11,3 +11,4 @@
 | 20/06 | OBJ-07 | LinkedList, avance de requerimientos | Felipe Gallardo | 1 horas | 2.5 horas | 
 | 21/06 | OBJ-08 | Update Informe técnico | Felipe Gallardo | 0.5 horas | 1.5 horas
 | 23/06 | OBJ-09 | Problemas con OpenCv; Busqueda de Soluciones | Feipe Gallardo | 1 horas | 1.5 horas | 
+| 24/06 | OBJ-10 | Analisís de solución posible / termino de clases linkedlist, nodo y persona | Felipe Gallardo | 2 horas | 2.5 horas |
