@@ -1,9 +1,0 @@
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/Experimental.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/Nightly.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/Continuous.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/opencvtest.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/PACKAGE.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/RUN_TESTS.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/pipen/OneDrive/Documentos/Universidad/Sem/Estructura/Taller de Pruebas/ED22-01-Gallardo/build/CMakeFiles/ZERO_CHECK.dir
