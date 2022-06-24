@@ -10,3 +10,4 @@
 | 19/06 | OBJ-06 | Nodos, Linkedlist, Persona, Detector | Felipe Gallardo | 2 horas | 4.5 horas |
 | 20/06 | OBJ-07 | LinkedList, avance de requerimientos | Felipe Gallardo | 1 horas | 2.5 horas | 
 | 21/06 | OBJ-08 | Update Informe técnico | Felipe Gallardo | 0.5 horas | 1.5 horas
+| 23/06 | OBJ-09 | Problemas con OpenCv; Busqueda de Soluciones | Feipe Gallardo | 1 horas | 1.5 horas | 
