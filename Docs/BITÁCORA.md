@@ -13,3 +13,4 @@
 | 23/06 | OBJ-09 | Problemas con OpenCv; Busqueda de Soluciones. | Felipe Gallardo | 1 horas | 1.5 horas | 
 | 24/06 | OBJ-10 | Analisís de solución posible / termino de clases linkedlist, nodo y persona. | Felipe Gallardo | 2 horas | 2.5 horas |
 | 24/06 | OBJ-11 | Arreglos en clases por requerimientos. | Felipe Gallardo | 3 horas | 2.5 horas |
+| 24/06 | OBJ-12 | Avance de reporte técnico. | Felipe Gallardo | 1 horas | 2 horas | 
