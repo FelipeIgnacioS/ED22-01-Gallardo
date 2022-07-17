@@ -16,8 +16,6 @@ int main()
     int entrys = 0;
     int leaves = 0;
     float horas; //time[s] /3600
-    int entriesDiff = 0;
-    int leavesDiff = 0;
 
     Detector detector;
     Mat imagen;
@@ -40,35 +38,18 @@ int main()
     imshow("People detector", imagen);
     waitKey(0);
 
-    linkedList personasDistintas = new LinkedList();
-    linkedList personasDistintasEntries = new LinkedList();
-    LinkedList personasDistintasLeaves = new LinkedList();
 
-    /*contador de personas
-    Persona p = new Persona();
-    Nodo n = new Nodo(p);
-    if (!personasDistintas.exits(n)){
-        personasDistintas.add(p);
-    }
-    //entrada
+    return 0;
+    /*
+       Comparar distancias con los centroides para determinar entradas y salidas (Matriz)
+        En caso de que un punto quede suelto con la comparacion de la lista anterior se debe crear un nuevo nodo y asignarle un identificador, con una variable dentro del sistema
+        Crear tabla de distancia matriz
+        ------ - GENERAL------ -
 
-    if(personasDistintasEntries.exists(n)){
-        p.sumE();
-    }else{
-        personasDistintasEntries.add_ord_entry(p);
-        p.sumE;
-        entrysDiff++;
-    }entrys++;
+        ------ - ELIMINAR UNA PERSONA------ -
+        Comparar distancias, en caso de que sobre un nodo, que no corresponda a la distancia con el punto se elimina
 
-    //salida
-     if(personasDistintasLeaves.exists(n)){
-        p.sumL();
-    }else{
-        personasDistintasLeaves.add_ord_leave(p);
-        p.sumL();
-        leavesDiff++;
-    }leaves++;
 
     */
-    return 0;
+ 
 }

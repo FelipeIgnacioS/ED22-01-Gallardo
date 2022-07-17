@@ -30,47 +30,6 @@ void LinkedList::add(Nodo* newNode) {
 	}
 	sizel++;
 }
-void LinkedList::add_ord_entry(Nodo* n) {
-	Nodo* aux = first;
-
-	if (!first) {
-		first = n;
-	}
-	else {
-		People p1 = first->getPeople();
-		People p2 = n->getPeople();
-		if (p1.getEntry() > p2.getEntry()) {
-			n->setNext(first);
-			first = n;
-		}
-		else {
-			while ((aux->getNext() != nullptr) && (aux->getNext()->getPeople().getEntry() < p2.getEntry())) {
-				aux = aux->getNext();
-			}
-		}
-	}sizel++;
-}
-
-void LinkedList::add_ord_leave(Nodo* n) {
-	Nodo* aux = first;
-
-	if (!first) {
-		first = n;
-	}
-	else {
-		People p1 = first->getPeople();
-		People p2 = n->getPeople();
-		if (p1.getLeave() > p2.getLeave()) {
-			n->setNext(first);
-			first = n;
-		}
-		else {
-			while ((aux->getNext() != nullptr) && (aux->getNext()->getPeople().getLeave() < p2.getLeave())) {
-				aux = aux->getNext();
-			}
-		}
-	}sizel++;
-}
 bool LinkedList::exists(Nodo* n) {
 	Nodo* aux = first;
 	if (aux->getPeople().getID() == n->getPeople().getID()) return false;
@@ -109,7 +68,6 @@ void LinkedList::ordenarLeaves()
 	Nodo* index = nullptr;
 	People temp;
 	if (first == nullptr)return;
-
 	else {
 		while (current != nullptr) {
 			index = current->getNext();

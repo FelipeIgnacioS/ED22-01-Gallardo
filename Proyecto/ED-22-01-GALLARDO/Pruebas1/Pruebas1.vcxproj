@@ -132,8 +132,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Detector.cpp" />
+    <ClCompile Include="DetectorPersonas.cpp" />
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="People.cpp" />
   </ItemGroup>

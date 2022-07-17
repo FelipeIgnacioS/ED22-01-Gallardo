@@ -8,18 +8,16 @@ private:
 	int sizel;
 
 public:
-	LinkedList();
-	~LinkedList();
-	bool empty();
-	int size();
-	void add(Nodo* n);
-	void add_ord_entry(Nodo* n);
-	void add_ord_leave(Nodo* n);
-	bool exists(Nodo* n);
-	void ordenarEntriess();
-	void ordenarLeaves();
-	void MostrarPersonasL(int cant);
-	void MostrarPersonasE(int cant);
+	LinkedList(); //constructor de la LinkedList
+	~LinkedList(); //destructor de la LinkedList
+	bool empty(); //Devuelve un booleano, true si la lista esta vacia, false si tiene algun elemento
+	int size(); //Devuelve la cantidad de elementos en una lista
+	void add(Nodo* n); //agrega un nodo a la lista
+	bool exists(Nodo* n); // pregunta si existe algun elemento en la lista
+	void ordenarEntriess(); //ordena la lista de mayor a menor segun la cantidad de entradas
+	void ordenarLeaves(); //ordena la lista de mayor a menor segun la cantidad de salidas
+	void MostrarPersonasL(int cant); //imprime  x cantidad de elementos de la lista por orden de salidas
+	void MostrarPersonasE(int cant); //imprime  x cantidad de elementos de la lista por orden de entradas
 };
 
 #endif // !LINKEDLIST_H

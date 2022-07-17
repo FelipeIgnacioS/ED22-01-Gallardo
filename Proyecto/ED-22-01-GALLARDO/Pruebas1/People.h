@@ -9,8 +9,8 @@
 class People
 {
 private:
-    int xComienzo;
-    int yComienzo;
+    int xComienzo; 
+    int yComienzo; 
     int xFin;
     int yFin;
     int xCentro;
@@ -20,19 +20,19 @@ private:
     int id;
 
 public:
-    People();
-    People(cv::Rect&);
-    int getXComienzo();
+    People(); //constructor sin parametros
+    People(cv::Rect&); //constructor con entrada de rectangulo de la persona
+    int getXComienzo(); 
     int getYComienzo();
     int getXFin();
     int getYFin();
     int getXCentro();
     int getYCentro();
-    void sumL();
-    void sumE();
-    int getEntry();
-    int getLeave();
-    int getID();
+    void sumL(); //sumar una entrada
+    void sumE(); //sumas una salida
+    int getEntry(); //obtener cantidad de entradas
+    int getLeave(); //obtener cantidad de salidas
+    int getID(); //obtener identificador de la persona
  
 };
 
