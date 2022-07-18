@@ -54,3 +54,7 @@ int People::getLeave() {
 int People::getID() {
     return id;
 }
+
+void People::setID(int i) {
+    this->id = i;
+}

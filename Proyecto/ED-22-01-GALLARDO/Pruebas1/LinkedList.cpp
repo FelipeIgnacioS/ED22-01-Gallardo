@@ -125,4 +125,26 @@ void LinkedList::MostrarPersonasL(int cant)
 	}
 }
 
+Nodo* LinkedList::getNodo(int a) 
+{
+	Nodo* current = first;
+	if (first == nullptr) {
+		printf("No hay personas en la lista");
+		return;
+	}
+	for (int i = 0; i < a; i++)
+	{
+		current = current->getNext();
+	}
+	People p = current->getPeople();
+}
+
+void LinkedList::Reset()
+{
+	for (int i = 0; i < size(); i++) //hacemos un reset a todos los nodos dentro de la lista para luego poder compararlos con los puntos
+	{
+		Nodo* current = getNodo(i);
+		current->reset();
+	}
+}
 LinkedList::~LinkedList() {}

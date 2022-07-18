@@ -1,12 +1,15 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Pruebas1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  DetectorPersonas.cpp
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetectorPersonas.cpp(21,11): warning C4101: 'horas': unreferenced local variable
   LinkedList.cpp
 C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(102,40): warning C4474: 'printf' : too many arguments passed for format string
 C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(102,40): message : placeholders and their parameters expect 0 variadic arguments, but 4 were provided
 C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(122,40): warning C4474: 'printf' : too many arguments passed for format string
 C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(122,40): message : placeholders and their parameters expect 0 variadic arguments, but 4 were provided
+  Nodo.cpp
   Generating code
-  0 of 216 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Pruebas1.vcxproj -> C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\x64\Release\ED22-01-GALLARDO.exe
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetectorPersonas.cpp(27): error C4700: uninitialized local variable 'cantImagenes' used
+  126 of 217 functions (58.1%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    8 functions had inline decision re-evaluated but remain unchanged
+LINK : fatal error LNK1257: code generation failed

@@ -33,7 +33,7 @@ public:
     int getEntry(); //obtener cantidad de entradas
     int getLeave(); //obtener cantidad de salidas
     int getID(); //obtener identificador de la persona
- 
+    void setID(int i);
 };
 
 #endif

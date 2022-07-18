@@ -18,6 +18,8 @@ public:
 	void ordenarLeaves(); //ordena la lista de mayor a menor segun la cantidad de salidas
 	void MostrarPersonasL(int cant); //imprime  x cantidad de elementos de la lista por orden de salidas
 	void MostrarPersonasE(int cant); //imprime  x cantidad de elementos de la lista por orden de entradas
+	Nodo* getNodo(int a);
+	void Reset();
 };
 
 #endif // !LINKEDLIST_H

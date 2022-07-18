@@ -9,6 +9,7 @@ Nodo::Nodo() {
 Nodo::Nodo(People p) {
 	persona = p;
 	next = nullptr;
+	act = false;
 }
 
 void Nodo::setNext(Nodo* Nodo)
@@ -29,4 +30,14 @@ Nodo::~Nodo(){}
 void Nodo::setPeople(People p)
 {
 	this->persona = p;
+}
+
+void Nodo::actualizar()
+{
+	act = true;
+}
+
+void Nodo::reset()
+{
+	act = false;
 }
