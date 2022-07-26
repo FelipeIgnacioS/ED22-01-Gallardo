@@ -15,19 +15,20 @@ void Detector::toggleMode() { m = (m == Default ? Daimler : Default); }
 
 string Detector::modeName() const { return (m == Default ? "Default" : "Daimler"); }
 
-vector<People> Detector::detect(InputArray img) {
+LinkedList Detector::detect(InputArray img) {
     vector<Rect> found;
     if (m == Default)
         hog.detectMultiScale(img, found, 0, Size(2, 2), Size(4, 4), 1.05, 2, false);
     else if (m == Daimler)
         hog_d.detectMultiScale(img, found, 1, Size(2, 2), Size(4, 4), 1.05, 3, true);
 
-    vector<People> Peoples;
+    LinkedList Peoples;
 
     for (vector<Rect>::iterator i = found.begin(); i != found.end(); ++i) {
         Rect& r = *i;
         People p(r);
-        Peoples.push_back(p);
+        Nodo* n =  new Nodo(p);
+        Peoples.add(n);
     }
 
     return Peoples;

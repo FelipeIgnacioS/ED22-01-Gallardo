@@ -1,15 +1,11 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Pruebas1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  DetectorPersonas.cpp
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetectorPersonas.cpp(21,11): warning C4101: 'horas': unreferenced local variable
-  LinkedList.cpp
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(102,40): warning C4474: 'printf' : too many arguments passed for format string
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(102,40): message : placeholders and their parameters expect 0 variadic arguments, but 4 were provided
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(122,40): warning C4474: 'printf' : too many arguments passed for format string
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\LinkedList.cpp(122,40): message : placeholders and their parameters expect 0 variadic arguments, but 4 were provided
-  Nodo.cpp
-  Generating code
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetectorPersonas.cpp(27): error C4700: uninitialized local variable 'cantImagenes' used
-  126 of 217 functions (58.1%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
-LINK : fatal error LNK1257: code generation failed
+  DetecorDePersonas.cpp
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(19,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(44,13): error C3861: 'cargarImagenes': identifier not found
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(64,17): error C3861: 'obtenerSalidas': identifier not found
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(87,17): error C3861: 'obtenerEntradas': identifier not found
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(110,17): error C3861: 'flujoEntrada': identifier not found
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(133,17): error C3861: 'flujoSalida': identifier not found
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(153,9): error C2361: initialization of 'op' is skipped by 'default' label
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(46): message : see declaration of 'op'
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(156,9): warning C4065: switch statement contains 'default' but no 'case' labels

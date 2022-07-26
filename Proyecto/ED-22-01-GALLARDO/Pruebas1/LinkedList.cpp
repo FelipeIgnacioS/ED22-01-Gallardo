@@ -130,13 +130,15 @@ Nodo* LinkedList::getNodo(int a)
 	Nodo* current = first;
 	if (first == nullptr) {
 		printf("No hay personas en la lista");
-		return;
+		return nullptr;
 	}
 	for (int i = 0; i < a; i++)
 	{
 		current = current->getNext();
 	}
-	People p = current->getPeople();
+	return current;
+
+
 }
 
 void LinkedList::Reset()

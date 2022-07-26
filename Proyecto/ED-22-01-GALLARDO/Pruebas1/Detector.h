@@ -9,7 +9,7 @@
 #include <iostream>
 #include <iomanip>
 #include "People.h"
-
+#include "LinkedList.h"
 
 using namespace cv;
 using namespace std;
@@ -30,8 +30,8 @@ public:
 
     string modeName() const;
 
-    vector<People> detect(InputArray img);
-
+    //vector<People> detect(InputArray img);
+    LinkedList detect(InputArray img);
     void adjustRect(Rect& r) const;
 };
 

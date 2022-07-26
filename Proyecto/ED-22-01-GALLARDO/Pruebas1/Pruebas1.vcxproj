@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DetecorDePersonas.cpp" />
     <ClCompile Include="Detector.cpp" />
     <ClCompile Include="DetectorPersonas.cpp" />
     <ClCompile Include="LinkedList.cpp" />
