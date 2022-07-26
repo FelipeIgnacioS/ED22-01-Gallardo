@@ -14,3 +14,5 @@
 | 24/06 | OBJ-10 | Analisís de solución posible / termino de clases linkedlist, nodo y persona. | Felipe Gallardo | 2 horas | 2.5 horas |
 | 24/06 | OBJ-11 | Arreglos en clases por requerimientos. | Felipe Gallardo | 3 horas | 2.5 horas |
 | 24/06 | OBJ-12 | Avance de reporte técnico. | Felipe Gallardo | 1 horas | 2 horas | 
+| 17/07 | OBJ-13 | Avances en clases | Felipe Gallardo | 2 horas | 3 horas |
+| 26-07 | OBJ-14 | Menu, linkedlist, detector | Felipe Gallardo | 1.5 horas | 3.5 horas |
