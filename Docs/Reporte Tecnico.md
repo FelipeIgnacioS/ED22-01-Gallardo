@@ -53,6 +53,8 @@ En el siguiente diagrama se refleja cómo se trabajara con la clase Persona y No
 
 ![Image Text](https://github.com/FelipeIgnacioS/ED22-01-Gallardo/blob/main/Docs/images/Diagrama.png) 
 
+Hubo un cambio de diseño debido a los requerimientos, se tendran nodos con personas dentros para que sean almancenadas dentro de una lista enlazada simple, ocuparemos matrices para el guardado de distancias entre puntos y personas, se usaran vectores para el guardado de puntos.
+
 ### 2.3 Implementación
 
 En cuanto a la implementación se crearon las siguientes clases:
@@ -66,8 +68,8 @@ Clase LinkedList: Lista de enlace simple, cuenta con un first de referencia, tie
 Clase Detector: Clase necesaria que recibirá una imagen o vídeo la cual procesara para poder identificar los individuos.
 
 ## 3 Resultados
-
+Como resultado se logró el reconocimiento de personas a través de la librería de OpenCV, identificando cada una de estas, se logró el almacenamiento de cada una de estas mediante listas enlazadas simples, no se logro implementar todos los puntos a cabalidad, pero sí desarrollando una gran parte de la lógica que conlleva  el proceso del movimiento de las personas a través de imágenes o videos/frames, reconociendo el movimiento de sus centroides a través de cada uno de estos.
 ## 4 Conclusiones 
-
+Finalizando con el reporte, se necesita una mayor investigación de las posibles soluciones, y en consideración a lo anteriormente mencionado, también se notó la falta de conocimientos previos con respecto a herramientas como OpenCv, CMake, Visual Studio, asimismo al manejo de la sintaxis de un nuevo lenguaje. Se consiguió adquirir nuevos conocimientos en estas tecnologías, que se seguirán desarrollando a través del tiempo. Se adquirió nuevos conocimientos con respecto a tecnologías no empleadas anteriormente, se dio un salto grande de conocimientos que serán una gran herramienta de apoyo para futuros proyectos.
 # Anexos
 1. ADRIAN ROSEBROCK OpenCV People Counter https://pyimagesearch.com/2018/08/13/opencv-people-counter/ fecha de acceso: 10/06/2022
