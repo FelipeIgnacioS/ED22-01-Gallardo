@@ -1,11 +1,9 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Pruebas1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   DetecorDePersonas.cpp
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(19,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(44,13): error C3861: 'cargarImagenes': identifier not found
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(64,17): error C3861: 'obtenerSalidas': identifier not found
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(87,17): error C3861: 'obtenerEntradas': identifier not found
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(110,17): error C3861: 'flujoEntrada': identifier not found
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(133,17): error C3861: 'flujoSalida': identifier not found
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(153,9): error C2361: initialization of 'op' is skipped by 'default' label
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(46): message : see declaration of 'op'
-C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(156,9): warning C4065: switch statement contains 'default' but no 'case' labels
+C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\Pruebas1\DetecorDePersonas.cpp(20,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  72 of 289 functions (24.9%) were compiled, the rest were copied from previous compilation.
+    8 functions were new in current compilation
+    25 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Pruebas1.vcxproj -> C:\Users\pipen\OneDrive\Escritorio\ED22-01-Gallardo\ED22-01-Gallardo\Proyecto\ED-22-01-GALLARDO\x64\Release\ED22-01-GALLARDO.exe
