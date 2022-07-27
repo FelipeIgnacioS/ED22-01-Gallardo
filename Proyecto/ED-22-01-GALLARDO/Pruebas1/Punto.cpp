@@ -1,10 +1,16 @@
 #include "Punto.h"
 using namespace std;
 
-Punto::Punto(int x, int y) {
-	x = x;
-	y = y;
+Punto::Punto(int a, int b) {
+	x = a;
+	y = b;
 }
+
+Punto::Punto() {
+	x = 0;
+	y = 0;
+}
+
 int Punto::getX() {
 	return x;
 }

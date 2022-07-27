@@ -12,6 +12,8 @@
 #include "Nodo.h"
 #include "Punto.h"
 
+
+
 using namespace cv;
 using namespace std;
 
@@ -219,7 +221,7 @@ vector<String> adminMenu()
         cout << "Ingrese una opcion valida" << endl;
     }
     vector<String> path1;
-    path1.push_back("1");
+    path1.push_back("1"); //ingresar imagenes a cada path (rutas)
     path1.push_back("2");
     vector<String> path2;
     path2.push_back("2");
@@ -293,30 +295,76 @@ int main(int argc, char** argv) {
 
     int entrys = 0; //entradas al recinto
     int leaves = 0; //salidas del recinto
-    float tiempo;
+    float tiempo; //tiempo transcurrido
+
     Detector detector;
     Mat imagen;
     vector<String> imagenes;
-    imagenes.push_back("C:/Users/pipen/OneDrive/Escritorio/ED22-01-Gallardo/ED22-01-Gallardo/Imagen/image1679.png");
-    imagen = imread(imagenes[0]);
-    detector.toggleMode();
-    cout << detector.modeName() << endl;
-
+    LinkedList* listaIdentidades = new LinkedList();
     
-    LinkedList* lista1 = new LinkedList();
-    *lista1 = detector.detect(imagen);
-    for (int i = 0; i < lista1->size(); i++)
+    //for que contiene la cantidad de frames
+    for (int j = 0; j < imagenes.size(); j++)
     {
-        People p = lista1->getNodo(i)->getPeople();
-        rectangle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), cv::Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
-        circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
-        circle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), 3, cv::Scalar(255, 0, 255), 2);
-        circle(imagen, cv::Point(p.getXFin(), p.getYFin()), 3, cv::Scalar(0, 255, 255), 2);
+        imagen = imread(imagenes[j]);
+        detector.toggleMode();
+
+        LinkedList* lista1 = new LinkedList();
+        *lista1 = detector.detect(imagen); //cantidad de personas en la imagen.
+        vector<Punto> puntos; //puntos de cada frame
+        for (int i = 0; i < lista1->size(); i++)
+        {
+            People p = lista1->getNodo(i)->getPeople();
+            //dibujo de el rectangulo de la imagen de los puntos del rectangulo y centroide
+            rectangle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), cv::Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
+            circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
+            circle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), 3, cv::Scalar(255, 0, 255), 2);
+            circle(imagen, cv::Point(p.getXFin(), p.getYFin()), 3, cv::Scalar(0, 255, 255), 2);
+            Punto pun = Punto(p.getXCentro(), p.getYCentro());
+            puntos.push_back(pun);
+        }
+        if (listaIdentidades->empty()) //caso para el primer frame o imagen ingresada al sistema
+        {
+            for (int a = 0; a < lista1->size(); a++)
+            {
+                listaIdentidades->add(lista1->getNodo(a)); 
+            }
+        }
+
+        else 
+        {
+            float matrizDistancias[20][20];//se crea una matriz de 20x20 ya que c++ no permite crear una matriz con valores variables;
+            int filas = listaIdentidades->size();
+            int col = puntos.size();
+            for (int i = 0; i < filas; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    int xiden = listaIdentidades->getNodo(i)->getPeople().getXCentro(); //punto x de la identidad
+                    int yiden = listaIdentidades->getNodo(i)->getPeople().getYCentro(); //punto y de la identidad
+                    int xp = puntos[j].getX(); //punto x 
+                    int yp = puntos[j].getY(); //punto y
+                    matrizDistancias[i][j] = distancia(xiden, yiden, xp, yp); //llenar matriz con las distancias
+                }
+            }
+
+            if (filas==col)
+            {
+                //actualizar distancias ya que no hay un punto nuevo o un punto menos para agregar o quitar identidades
+            }
+            else 
+            {
+                //en caso de que no sean iguales las filas y columnas quiere decir que un punto se agrego o punto se fue
+                //habra que eliminar o agregar una identidad nueva
+                vector<bool> actualizados; //vector de tamaño de las identidades, true en caso de haber actualizado sus distancias, falso en el caso de que no
+            }
+        }
+
+        
+
+        
+        
+
     }
-
-    imshow("People detector", imagen);
-    waitKey(0);
-
     return 0;
 
 

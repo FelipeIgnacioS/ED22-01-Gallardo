@@ -10,6 +10,7 @@ private:
 
 public:
 	Punto(int x, int y);
+	Punto();
 	int getX();
 	int getY();
 };
