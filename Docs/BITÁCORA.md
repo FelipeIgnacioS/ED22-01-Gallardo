@@ -18,3 +18,4 @@
 | 26-07 | OBJ-14 | Menu, linkedlist, detector | Felipe Gallardo | 1.5 horas | 3.5 horas |
 | 27-07 | OBJ-15 | Solucion Implementada | Felipe Gallardo | 2 horas | 2 horas | 
 | 28-07 | OBJ-16 | Detector terminado | Felipe Gallardo | 3 horas | 2.5 horas |
+| 29-07 | OBJ-17 | Taller terminado | Felipe Gallardo | 2 horas | 3 horas |
