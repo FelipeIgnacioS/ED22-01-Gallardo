@@ -445,37 +445,6 @@ vector<String> adminMenu(vector<String> selecc)
 
     return selecc;
 }
-/*
-void menu()     
-{
-    cout << "Bienvenido/a al sistema de vigilancia del edificio" <<endl;
-    string option = "-1";
-    bool op = false;
-    
-    while (!op) 
-    {
-        cout << "Para ingresar en el modo 'GUARDIA' pulse 1 " << endl;
-        cout << "Para ingresar en el modo 'ADMINISTRADOR' pulse 2 " << endl;
-        cout << "Para Salir del programa pulse 3" << endl;
-        cin >> option;
-        if (option == "1")
-        {
-            guardMenu();
-            op = true;
-        }
-        if (option == "2")
-        {
-            adminMenu();
-            op = true;
-        }
-        if (option == "3")
-        {
-            op = true;
-        }
-    }
-    cout << "Cerrando programa..." << endl;
- }
- */
 
 
 int main(int argc, char** argv) {
