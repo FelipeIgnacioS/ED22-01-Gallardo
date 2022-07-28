@@ -1,4 +1,5 @@
-    Detector detector;
+/*
+Detector detector;
     Mat imagen;
     vector<String> imagenes;
     imagenes.push_back("C:/Users/pipen/OneDrive/Escritorio/ED22-01-Gallardo/ED22-01-Gallardo/Imagen/image1679.png");
@@ -22,3 +23,4 @@
     waitKey(0);
 
 }
+*/

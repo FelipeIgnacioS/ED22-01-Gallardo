@@ -20,6 +20,10 @@ using namespace std;
 float distancia(int x1, int y1, int x2, int y2) 
 {
     float dist = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));;
+    if (dist<0) //distancia siempre positiva
+    {
+        dist = -dist;
+    }
     return dist;
 }
 
@@ -319,7 +323,7 @@ int main(int argc, char** argv) {
             circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
             circle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), 3, cv::Scalar(255, 0, 255), 2);
             circle(imagen, cv::Point(p.getXFin(), p.getYFin()), 3, cv::Scalar(0, 255, 255), 2);
-            Punto pun = Punto(p.getXCentro(), p.getYCentro());
+            Punto pun = Punto(p.getXComienzo(),p.getYComienzo(),p.getXCentro(),p.getYCentro(),p.getXFin(),p.getYFin());
             puntos.push_back(pun);
         }
         if (listaIdentidades->empty()) //caso para el primer frame o imagen ingresada al sistema
@@ -327,22 +331,23 @@ int main(int argc, char** argv) {
             for (int a = 0; a < lista1->size(); a++)
             {
                 listaIdentidades->add(lista1->getNodo(a)); 
+                entrys++; //asumiendo que las personas que inician en el video estan entrando
             }
         }
 
         else 
         {
             float matrizDistancias[20][20];//se crea una matriz de 20x20 ya que c++ no permite crear una matriz con valores variables;
-            int filas = listaIdentidades->size();
-            int col = puntos.size();
+            int filas = puntos.size();
+            int col = listaIdentidades->size();
             for (int i = 0; i < filas; i++)
             {
                 for (int j = 0; j < col; j++)
                 {
-                    int xiden = listaIdentidades->getNodo(i)->getPeople().getXCentro(); //punto x de la identidad
-                    int yiden = listaIdentidades->getNodo(i)->getPeople().getYCentro(); //punto y de la identidad
-                    int xp = puntos[j].getX(); //punto x 
-                    int yp = puntos[j].getY(); //punto y
+                    int xiden = listaIdentidades->getNodo(j)->getPeople().getXCentro(); //punto x de la identidad
+                    int yiden = listaIdentidades->getNodo(j)->getPeople().getYCentro(); //punto y de la identidad
+                    int xp = puntos[i].getX(); //punto xCentro 
+                    int yp = puntos[i].getY(); //punto yCentro
                     matrizDistancias[i][j] = distancia(xiden, yiden, xp, yp); //llenar matriz con las distancias
                 }
             }
@@ -350,12 +355,121 @@ int main(int argc, char** argv) {
             if (filas==col)
             {
                 //actualizar distancias ya que no hay un punto nuevo o un punto menos para agregar o quitar identidades
+
+                for (int i = 0; i < filas; i++)
+                {
+                    float menor = 99999999;
+                    int xC, yC, x, y, xF, yF;
+                    People p;
+                    for (int j = 0; j < col; j++)
+                    {
+                        if (matrizDistancias[i][j] < menor)
+                        {
+                            menor = matrizDistancias[i][j];
+                            xC = puntos[i].getXc();
+                            yC = puntos[i].getYc();
+                            x = puntos[i].getX();
+                            y = puntos[i].getY();
+                            xF = puntos[i].getX();
+                            yF = puntos[i].getYf();
+                            p = listaIdentidades->getNodo(j)->getPeople();
+                        }
+                    }
+                    //actualizamos la identidad con sus nuevos puntos
+                    p.actualizarPuntos(xC, yC, x, y, xF, yF);
+                }
             }
+
             else 
             {
                 //en caso de que no sean iguales las filas y columnas quiere decir que un punto se agrego o punto se fue
                 //habra que eliminar o agregar una identidad nueva
                 vector<bool> actualizados; //vector de tamaño de las identidades, true en caso de haber actualizado sus distancias, falso en el caso de que no
+                
+                if (filas>col) //si las filas son mayores que las columnas quiere decir que una nueva persona ingreso al edifcio
+                {
+                    entrys++;
+                    for (int a = 0; a < puntos.size(); a++) //llenamos el vector de false del tamaño de la cantidad de puntos, se le asignaran true si fueron asignados a alguna entidad
+                    {
+                        actualizados[a] = false;
+                    }
+
+                    for (int i = 0; i < col; i++)
+                    {
+                        float menor = 9999;
+                        int xC, yC, x, y, xF, yF;
+                        int cont;
+                        People p;
+                        for (int j = 0; j < filas; j++)
+                        {
+                            if (matrizDistancias[j][i] < menor)
+                            {
+                                menor = matrizDistancias[j][i];
+                                xC = puntos[j].getXc();
+                                yC = puntos[j].getYc();
+                                x = puntos[j].getX();
+                                y = puntos[j].getY();
+                                xF = puntos[j].getX();
+                                yF = puntos[j].getYf();
+                                p = listaIdentidades->getNodo(i)->getPeople();
+                                cont = j;
+                            }
+                            p.actualizarPuntos(xC, yC, x, y, xF, yF); //actualizamos el punto
+                            actualizados[cont] = true; //convertimos a true la posicion del punto
+                        }
+                    }
+                    for (int b = 0; b < puntos.size(); b++) //recorremos el vector de booleanos
+                    {
+                        if (!actualizados[b]) //si uno de los booleanos es false entonces creamos una nueva persona y le asignamos el punto
+                        {
+                            Punto pun = puntos[b];
+                            People p = People(pun.getXc(), pun.getYc(), pun.getX(), pun.getY(),pun.getXf(),pun.getYf());
+                            Nodo* n = new Nodo(p);
+                            listaIdentidades->add(n); //agregamos la nueva persona a la lista de identidades
+                        }
+                    }
+                }
+                else //en el caso de que las filas sean menores que las columnas quiere decir que una persona salio del edificio
+                {
+                    leaves++;
+                    for (int a = 0; a < listaIdentidades->size(); a++) //llenamos el vector de false del tamaño de las identidades presentes en la linked list
+                    {
+                        actualizados[a] = false;
+                    }
+
+                    for (int i = 0; i < filas; i++)
+                    {
+                        float menor = 99999999;
+                        int xC, yC, x, y, xF, yF;
+                        People p;
+                        int cont;
+                        for (int j = 0; j < col; j++)
+                        {
+                            if (matrizDistancias[i][j] < menor)
+                            {
+                                menor = matrizDistancias[i][j];
+                                xC = puntos[i].getXc();
+                                yC = puntos[i].getYc();
+                                x = puntos[i].getX();
+                                y = puntos[i].getY();
+                                xF = puntos[i].getX();
+                                yF = puntos[i].getYf();
+                                p = listaIdentidades->getNodo(j)->getPeople();
+                                cont = j;
+                            }
+                        }
+                        //actualizamos la identidad con sus nuevos puntos
+                        p.actualizarPuntos(xC, yC, x, y, xF, yF); //actualizamos el punto
+                        actualizados[cont] = true;
+                    }
+                    for (int b = 0; b < puntos.size(); b++) //recorremos el vector de booleanos
+                    {
+                        if (!actualizados[b]) //si uno de los booleanos es false entonces eliminamos a la personas una 
+                        {
+                            listaIdentidades->del(b); //eliminamos el nodo en la posicion que no se actualizo debido a que salio
+                        }
+                    }
+                }
             }
         }
 

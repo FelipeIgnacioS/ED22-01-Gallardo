@@ -149,4 +149,31 @@ void LinkedList::Reset()
 		current->reset();
 	}
 }
+
+void LinkedList::del(int d)
+{
+	Nodo* current = first;
+	Nodo* current1 = current->getNext();
+
+	if (d < 1 || d > sizel) {
+		cout << "Fuera de rango " << endl;
+	}
+	else if (d == 1) {
+		first = current->getNext();
+	}
+	else {
+		for (int i = 2; i <= d; i++) {
+			if (i == d) {
+				Nodo* aux_node = current1;
+
+				current->setNext(current1->getNext());
+				delete aux_node;
+				sizel--;
+			}
+			current = current->getNext();
+			current1 = current1->getNext();
+		}
+	}
+}
+
 LinkedList::~LinkedList() {}

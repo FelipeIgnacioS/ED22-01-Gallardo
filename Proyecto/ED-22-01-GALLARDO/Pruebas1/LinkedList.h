@@ -20,6 +20,7 @@ public:
 	void MostrarPersonasE(int cant); //imprime  x cantidad de elementos de la lista por orden de entradas
 	Nodo* getNodo(int a);
 	void Reset();
+	void del(int d);
 };
 
 #endif // !LINKEDLIST_H

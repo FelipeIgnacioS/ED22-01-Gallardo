@@ -22,6 +22,7 @@ private:
 public:
     People(); //constructor sin parametros
     People(cv::Rect&); //constructor con entrada de rectangulo de la persona
+    People(int xc, int yc, int x, int y, int xf, int yf);//ingresando los puntos manualmente;
     int getXComienzo(); 
     int getYComienzo();
     int getXFin();
@@ -34,6 +35,7 @@ public:
     int getLeave(); //obtener cantidad de salidas
     int getID(); //obtener identificador de la persona
     void setID(int i);
+    void actualizarPuntos(int xc, int yc, int x, int y, int xf, int yf);
 };
 
 #endif

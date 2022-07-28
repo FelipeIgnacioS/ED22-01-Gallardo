@@ -1,19 +1,47 @@
 #include "Punto.h"
 using namespace std;
 
-Punto::Punto(int a, int b) {
-	x = a;
-	y = b;
+
+Punto::Punto(int xc, int yc, int x, int y, int xf, int yf) {
+	xComen = xc;
+	yComen = yc;
+	xCen = x;
+	yCen = y;
+	xFin = xf;
+	yFin = yf;
 }
 
 Punto::Punto() {
-	x = 0;
-	y = 0;
+	xComen = 0;
+	yComen = 0;
+	xCen = 0;
+	yCen = 0;
+	xFin = 0;
+	yFin = 0;
+}
+
+
+int Punto::getXc() {
+	return xComen;
+}
+
+int Punto::getYc() {
+	return yComen;
 }
 
 int Punto::getX() {
-	return x;
+	return xCen;
 }
+
 int Punto::getY() {
-	return y;
+	return yCen;
 }
+
+int Punto::getXf() {
+	return xFin;
+}
+
+int Punto::getYf() {
+	return yFin;
+}
+
