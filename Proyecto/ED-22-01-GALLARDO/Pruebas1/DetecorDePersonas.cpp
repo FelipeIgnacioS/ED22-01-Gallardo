@@ -14,8 +14,6 @@
 
 #include <ctime> //libreria para tiempo
 
-
-
 using namespace cv;
 using namespace std;
 
@@ -29,11 +27,8 @@ float distancia(int x1, int y1, int x2, int y2)
     return dist;
 }
 
-void cargarImagenes(vector<String> imagenes, int* entrys, int* leaves, float* horas, float* flujoE, float* flujoS)
+void cargarImagenes(vector<String> imagenes, int& entrys, int& leaves, float& horas, float& flujoE, float& flujoS)
 {
-    entrys = 0; //entradas al recinto
-    leaves = 0; //salidas del recinto
-
     //tiempo
     clock_t t;
     t = clock();
@@ -42,7 +37,7 @@ void cargarImagenes(vector<String> imagenes, int* entrys, int* leaves, float* ho
     //cargar imagenes
     Detector detector;
     Mat imagen;
-    
+
     LinkedList* listaIdentidades = new LinkedList();
 
     //for que contiene la cantidad de frames
@@ -213,14 +208,15 @@ void cargarImagenes(vector<String> imagenes, int* entrys, int* leaves, float* ho
             }
         }
     }
+
     t = clock() - t;
     t = float(t) / CLOCKS_PER_SEC; //tiempo en segundos
-    *horas = (t / 3600);
-    *flujoE = *entrys / *horas;
-    *flujoS = *leaves / *horas;
+
+    horas = t/3600;   
+    //la funcion horas funciona como temporizador de la ejecucion del codigo para el calculo de tiempo transcurrido de frames, en caso de que lo ingresado al vector de imagenes sea frames por segundos, solo se contarian la cantidad de frames y se dividirian en horas
 }
 
-void guardMenu(vector<String> imagenes, int* entrys, int* leaves, float* horas, float* flujoE, float* flujoS)
+void guardMenu(vector<String> imagenes, int& entrys, int& leaves, float& horas, float& flujoE, float& flujoS)
 {
     cout << "Bienvenido al menu de 'GUARDIA'" << endl;
     
@@ -244,6 +240,7 @@ void guardMenu(vector<String> imagenes, int* entrys, int* leaves, float* horas, 
             cout << "Ha elegido la opcion de detectar personas" << endl;
             cout << "cargando imagenes" << endl;
             cargarImagenes(imagenes,entrys,leaves,horas,flujoE,flujoS);
+            cout << "Imagenes cargadas" << endl;
             cargado = true;
             bool op = false;
             while (!op)
@@ -399,7 +396,7 @@ void guardMenu(vector<String> imagenes, int* entrys, int* leaves, float* horas, 
     }
 }
 
-vector<String> adminMenu(vector<String> selecc) 
+void adminMenu(vector<String>& selecc) 
 {
     cout << "Bienvenido al menu de 'ADMINISTRADOR'" << endl;
     string option = "1";
@@ -442,29 +439,26 @@ vector<String> adminMenu(vector<String> selecc)
     {
         selecc.push_back(""); //ingresar rutas de imagenes
     }
-
-    return selecc;
 }
 
 
 int main(int argc, char** argv) {
     
-    int* entrys = 0; //entradas
-    int* leaves = 0; //salidas
-    float* horas = 0; //horas
-    float* flujoE = 0; //flujoEntrada
-    float* flujoS = 0; //flujoSalida
+    int entrys = 0; //entradas
+    int leaves = 0; //salidas
+    float horas = 0; //horas
+    float flujoE = 0; //flujoEntrada
+    float flujoS = 0; //flujoSalida
 
 
     vector<string> imagenes;
     //path predeterminado
-    imagenes.push_back(""); //llenar con el path predeterminado
-    
+    imagenes.push_back("C:/Users/pipen/OneDrive/Escritorio/ED22-01-Gallardo/ED22-01-Gallardo/Path/PathPredeterminado/image0292.png"); //llenar con el path predeterminado
+    imagenes.push_back("C:/Users/pipen/OneDrive/Escritorio/ED22-01-Gallardo/ED22-01-Gallardo/Path/PathPredeterminado/image0293.png");
     //menu
     cout << "Bienvenido/a al sistema de vigilancia del edificio" << endl;
     string option = "-1";
     bool op = false;
-
 
     while (!op)
     {
@@ -480,7 +474,7 @@ int main(int argc, char** argv) {
         if (option == "2")
         {
             adminMenu(imagenes);
-            op = true;
+            
         }
         if (option == "3")
         {
